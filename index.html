@@ -46,15 +46,24 @@
             padding-right: 35px;
             margin-left: 550px;
         }
+        #profile:hover{
+            transform: scale(1.25);
+        }
         .like{
             font-size: 15px;
             padding-top: 31px;
             padding-right: 35px;
             /* margin-left: 450px; */
         }
+        #like:hover{
+            transform: scale(1.25);
+        }
         .cart{
             padding-top: 31px;
             padding-right: 25px;
+        }
+        #cart:hover{
+            transform: scale(1.25);
         }
         li:hover{
             cursor:pointer;
@@ -173,7 +182,6 @@
             color: rgb(255, 92, 144);
             padding: 7px;
             margin-top: 16px;
-            margin-left: 85px;
             font-size: 13px;
             font-weight: bold;
             cursor: pointer;
@@ -196,7 +204,7 @@
         
         .dropdown-content{
             position: absolute;
-            margin-top: 30px;
+            margin-top: 40px;
             background-color: #f9f9f9;
             min-width:350px;
             max-height: 400px;
@@ -230,9 +238,7 @@
             
         } 
         /* .profile li:hover .dropdown{display: block;} */
-        #profile:hover{
-            transform: scale(1.25);
-        }
+        
         .profile:hover .dropdown-content{display: block;}
         
         </style>
@@ -290,12 +296,12 @@
             </div>
         </div>
         <div class="like">
-            <i class="fa fa-heart fa-lg" aria-hidden="true"></i>
+            <i id="like" class="fa fa-heart fa-lg" aria-hidden="true"></i>
             
         </div>
         <div class="cart">
             
-            <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+            <i id="cart" class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
         </div>
     <!-- This is Main Body Section -->
     <div class="section">
