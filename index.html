@@ -27,7 +27,7 @@
             font-size: 215x;
             font-weight:bold;
             padding: 5px;
-            padding-top: 28px;
+            padding-top: 32px;
             font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
         a:checked{
@@ -42,9 +42,19 @@
         }
         .profile{
             font-size: 15px;
-            margin: 0px;
-            padding-left: 15px;
-            margin-left: 410px;
+            padding-top: 29px;
+            padding-right: 35px;
+            margin-left: 550px;
+        }
+        .like{
+            font-size: 15px;
+            padding-top: 31px;
+            padding-right: 35px;
+            /* margin-left: 450px; */
+        }
+        .cart{
+            padding-top: 31px;
+            padding-right: 25px;
         }
         li:hover{
             cursor:pointer;
@@ -55,8 +65,8 @@
             position:absolute;
             text-align:start;
             position: fixed;
-            margin-top: 7px;
-            padding-top: 6px;
+            margin-top: 2px;
+            padding-bottom: 12px;
             left:55%;
             width:20rem;
             height: 25px;
@@ -67,7 +77,7 @@
         ul{
             display: flex;
             padding-right:20px;
-            padding-top: 9px;
+            /* padding-top: 9px; */
             padding-bottom: 0px;
             list-style: none;
             /* padding-bottom: 2px; */
@@ -130,7 +140,9 @@
         }
         
         #img{
-            padding-top: 20px;
+            padding-top: 15px;
+            margin-top: 10px;
+            padding-bottom: 15px;
             padding-left: 50px;
         }
         img{
@@ -190,7 +202,7 @@
             max-height: 400px;
             z-index: 1;
             right: 1%; 
-            /* display: none; */
+            display: none;
             align-items: center;
             box-shadow: 0px 8px 16px rgba(0,0,0,.2);
         } 
@@ -218,10 +230,11 @@
             
         } 
         /* .profile li:hover .dropdown{display: block;} */
-        ul li i:hover{
+        #profile:hover{
             transform: scale(1.25);
         }
-        .dropdown:hover .dropdown-content{display: block;}
+        .profile:hover .dropdown-content{display: block;}
+        
         </style>
 </head>
 <body>
@@ -253,35 +266,37 @@
         </form>
 
         <!-- This is user profile and cart section -->
-        <div class="profile">
-            <div class="icon">
-                <ul>
-                    <li>
-                        <i id="profile" class="fa fa-user fa-lg" aria-hidden="true" onclick="toggleMenu()"></i>
-    
-                        <i class="fa fa-heart fa-lg" aria-hidden="true"></i>
-    
-                        <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
-    
-                    </li>
-                </ul>
+        <div class="user">
+
+            <div class="profile">
+                <div class="icon">
+                    
+                            <i id="profile" class="fa fa-user fa-lg" aria-hidden="true" ></i>
+        
+                            
+                            
+                            <div class="dropdown" >
+                                <div class="dropdown-content">
+                                    <h3>Welcome</h3>
+                                    <p>To access account and manage orders</p>                       <button>Login/Signup</button>
+                                    <hr>
+                                    <a href="#">Orders</a>
+                                    <a href="#">Wishlist</a>
+                                    <a href="#">Saved Address</a>
+                                    <a href="#">Setting</a>
+                                </div>
+                            </div>  
+                 </div>    
             </div>
-            <div class="dropdown" >
-                <div class="dropdown-content">
-                    <h3>Welcome</h3>
-                    <p>To access account and manage orders</p>                       <button>Login/Signup</button>
-                    <hr>
-                    <a href="#">Orders</a>
-                    <a href="#">Wishlist</a>
-                    <a href="#">Saved Address</a>
-                    <a href="#">Setting</a>
-                </div>
-                
-            </div>    
+        </div>
+        <div class="like">
+            <i class="fa fa-heart fa-lg" aria-hidden="true"></i>
             
         </div>
-    </div>
-
+        <div class="cart">
+            
+            <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+        </div>
     <!-- This is Main Body Section -->
     <div class="section">
        
