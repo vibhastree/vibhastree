@@ -7,24 +7,27 @@
     <link rel="shortcut icon" href="/Favicon.png" type="image/x-icon">
     <title>Vibha Stree</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> -->
+    <!-- <script src="Script.js"></script> -->
     <style>
         body{
             margin: 0px;
             overflow-x: hidden;
+            /* overflow-y:visible; */
         }
         
         .nav{
             background-color: rgb(244, 242, 240);
             display: flex;
-            padding-top: 14px;
+            /* padding-top: 10px;
+            padding-bottom: 10px; */
         }
         #a{
             margin-left: 30px;
             font-size: 215x;
             font-weight:bold;
-            padding: 15px;
+            padding: 5px;
+            padding-top: 28px;
             font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
         a:checked{
@@ -41,7 +44,7 @@
             font-size: 15px;
             margin: 0px;
             padding-left: 15px;
-            margin-left: 390px;
+            margin-left: 410px;
         }
         li:hover{
             cursor:pointer;
@@ -61,15 +64,29 @@
             border-radius: 5px;
             border: 1px solid rgb(0, 0, 0,0) ;
         }
-        ul,li{
+        ul{
             display: flex;
-            padding-left:30px;
+            padding-right:20px;
+            padding-top: 9px;
+            padding-bottom: 0px;
+            list-style: none;
             /* padding-bottom: 2px; */
+        }
+        li{
+            /* padding-left: 10px; */
+            letter-spacing: 20px;
         }
         .icon{
             
             text-align: center;
+            padding-left: 10px;
+            padding-top: 3px;
         }
+        /* .icon:hover{
+            transform: scale(1.25);
+            margin-right: 10px;
+        } */
+        
         
         .header{
             color: white;
@@ -86,8 +103,9 @@
             position:relative;
             text-align:start;
             /* position: fixed; */
-            margin-top: 7px;
+            margin-top: 22px;
             padding-top: 6px;
+            padding: 3px;
             left:55%;
             width:20rem;
             height: 25px;
@@ -112,7 +130,7 @@
         }
         
         #img{
-            padding-top: 7px;
+            padding-top: 20px;
             padding-left: 50px;
         }
         img{
@@ -131,29 +149,85 @@
             padding-top: 10px;
             background-size: 40px 30px; */
         }
-        h1{
-            /* margin-top: 50%; */
-            text-align: center;
-            font-size: 80px;
-            position:absolute;
-            color: rgb(38, 18, 18);
-            padding: 0;
-        }
-        /* this is profile icon css for login */
+       
+        h3,p{
+            margin: 20px 36px;
+            margin-bottom: 2px;
+            text-align: left;
+        } 
+        
         button{
-            color: black;
+            background-color: rgb(255, 255, 255);
+            color: rgb(255, 92, 144);
+            padding: 7px;
+            margin-top: 16px;
+            margin-left: 85px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid rgb(143, 141, 142);
+            border-radius: 5px;
+            align-self: center;
+            /* right: 50%; */
+        }
+        button:hover{
+            border: 1px solid rgb(255, 92, 143);
+            
+        } 
+        hr{
+            width: 270px; 
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* float: left; */
+            ;
+        }
+        
+        .dropdown-content{
+            position: absolute;
+            margin-top: 30px;
+            background-color: #f9f9f9;
+            min-width:350px;
+            max-height: 400px;
+            z-index: 1;
+            right: 1%; 
+            /* display: none; */
+            align-items: center;
+            box-shadow: 0px 8px 16px rgba(0,0,0,.2);
+        } 
+        /* .dropdown .open-menu{
+            max-width: 300px;
+        } */
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content a{
+            display:flex;
+            flex-direction: column;   
+            padding: 5px;
+            text-align: left;
+            margin-left: 37px;
+        }
+        
+        .dropdown-content a:hover{
+            /* background-color: rgb(255, 92, 143); */
+            color:rgb(255, 92, 143); 
+            
+            /* left: 3%; */
 
+            
+        } 
+        /* .profile li:hover .dropdown{display: block;} */
+        ul li i:hover{
+            transform: scale(1.25);
         }
-        h6{
-            color: black;
-        }
+        .dropdown:hover .dropdown-content{display: block;}
         </style>
 </head>
 <body>
     <!--This is the header this contains background image and title -->
 
     <div class="header">
-        <h1>Vibha Stree</h1>
         <div class="row">
             <div class="imagegroup">
                 <img src="/1.jpg" alt="">
@@ -180,60 +254,63 @@
 
         <!-- This is user profile and cart section -->
         <div class="profile">
-            <ul>
-                <li>
-                    <div class="icon">
-                        <i class="fa fa-user fa-lg" aria-hidden="true"></i>
-                        <div class="prof">Profile</div>
-                        <div class="dropdown-menu">
-                            <h6>Welcome</h6>
-                            <p>To access account and manage orders</p>
-                            <button>Login/Signup</button>
-                            <hr>
-                            <ul>
-                                <li>Orders</li>
-                                <li>Wishlist</li>
-                                <li>Saved Address</li>
-                                <li>Setting</li>
-                            </ul>
-                        </div>                        
-                    </div>
-                </li>
-                <li>
-                    <div class="icon">
+            <div class="icon">
+                <ul>
+                    <li>
+                        <i id="profile" class="fa fa-user fa-lg" aria-hidden="true" onclick="toggleMenu()"></i>
+    
                         <i class="fa fa-heart fa-lg" aria-hidden="true"></i>
-                        <div class="Liked">Liked</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="icon">
+    
                         <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
-                        <div class="Cart">Cart</div>
-                    </div>
-                </li>
-            </ul>
+    
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown" >
+                <div class="dropdown-content">
+                    <h3>Welcome</h3>
+                    <p>To access account and manage orders</p>                       <button>Login/Signup</button>
+                    <hr>
+                    <a href="#">Orders</a>
+                    <a href="#">Wishlist</a>
+                    <a href="#">Saved Address</a>
+                    <a href="#">Setting</a>
+                </div>
+                
+            </div>    
+            
         </div>
     </div>
 
     <!-- This is Main Body Section -->
     <div class="section">
-        <!-- Example single danger button -->
-        <div class="dropdown">
-            <h6>Welcome</h6>
-            <p>To access account and manage orders</p>
-            <button>Login/Signup</button>
-            <hr>
-            <ul>
-                <li>Orders</li>
-                <li>Wishlist</li>
-                <li>Saved Address</li>
-                <li>Setting</li>
-            </ul>
-        </div>                        
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero aperiam deleniti eos, ipsa assumenda similique quam rerum eius reprehenderit laborum maiores voluptate sunt neque ea commodi esse quos quisquam optio ullam corporis! Voluptate mollitia ipsa recusandae dolorum excepturi consequuntur voluptatum aspernatur incidunt enim provident, officia quod quasi tenetur ratione ea animi. Tempora, explicabo veritatis magni officiis saepe, cumque nemo laborum labore eligendi eius necessitatibus repellat, ab nostrum! Harum maxime quam aperiam numquam, facilis laudantium nam minus ducimus repudiandae nulla molestiae accusamus tempora repellat officia impedit ullam doloribus quod. Eos unde veritatis iusto obcaecati optio architecto, quo ea sequi numquam repellendus esse eum a, exercitationem nostrum in vel ratione, corporis tempore officia illum! Vel veniam maiores laborum reiciendis fugit minus consequatur officia rem at, minima quasi voluptas quae sed velit. Adipisci voluptatem laudantium, alias porro quaerat quam est nesciunt labore minus earum, doloremque officia commodi dolore asperiores perferendis odio aliquam praesentium. Saepe repellendus nulla provident in consequuntur similique, adipisci beatae pariatur ex. Voluptates minus tempora ipsam atque dicta et hic possimus? Inventore aliquid sit pariatur consequatur molestiae obcaecati dolore exercitationem laudantium atque provident nam totam fuga est ipsum nulla, eum hic! Libero incidunt quibusdam tempora amet eveniet ipsum animi facere? Ex voluptates cupiditate culpa sapiente et molestiae maxime unde libero delectus ipsum autem in nulla mollitia voluptate, totam impedit accusamus doloremque eius amet aliquam! Soluta placeat veniam optio. Molestiae a adipisci ea iure corrupti officiis laborum rerum, quasi commodi assumenda nostrum iste sequi earum, cupiditate esse voluptatum. Deleniti quo pariatur sit. Illo nihil consequuntur eligendi. Aliquid est sapiente eum corrupti odit explicabo ipsam totam nulla architecto! Adipisci excepturi esse, modi perferendis eius doloremque possimus beatae mollitia aliquid nobis debitis fugit consequatur ipsum aspernatur ex? Deserunt aliquid laudantium incidunt voluptas illo, fugit dolor at modi esse voluptates qui soluta labore architecto rerum ut voluptate quidem mollitia reprehenderit? Dolorum consectetur eos, tenetur repellat deserunt quia? Cum, maxime quaerat nostrum quasi corrupti ea, sed alias ipsum sit neque doloremque. Autem vel provident porro corrupti laboriosam amet qui perspiciatis, dolores obcaecati perferendis laborum ex aspernatur inventore ipsa reprehenderit atque facilis facere accusamus pariatur voluptatibus odit quo a! Magni libero perferendis ad ea optio repellendus suscipit quibusdam sequi, dolor aliquid, natus delectus quis. Deserunt, sint dignissimos vitae molestias nihil numquam, quod ex officia ut dicta repellat recusandae necessitatibus labore accusantium cum eveniet possimus assumenda ab in obcaecati! Ducimus aperiam harum, eos accusamus fugit vitae dolor ipsa culpa. Quia laudantium eaque laboriosam dolor! Harum maxime, exercitationem doloribus dolorum hic, libero esse quo ullam repudiandae corrupti porro doloremque atque pariatur beatae rerum consequuntur quisquam magnam dolorem autem ab. Quas optio voluptatem porro nobis, eaque laborum veritatis, quia sequi aliquid magnam quaerat beatae aut nostrum blanditiis impedit repellendus aliquam rerum culpa quo error distinctio ullam. Aliquid eius quis explicabo? Quas repellendus dolorem modi facilis, quasi sed distinctio quia quo, natus, debitis a aliquid. Ea, quam ipsam rem molestias doloremque ipsa dolorum adipisci accusantium nisi fuga quod beatae provident error sequi quisquam a iure! Nihil quae consequatur ipsam minima culpa eligendi, enim quidem, magni dolor, deleniti dignissimos sit nesciunt sunt vel magnam ipsum consectetur nostrum tempora? Tempore quod illo nihil modi dignissimos autem corrupti aperiam similique, iure voluptate amet ut excepturi ullam voluptatibus, impedit repellat consequuntur id tempora cum eaque. Dolores voluptatem obcaecati ea repellendus vero dolor distinctio accusantium natus quidem officiis minus tempore commodi voluptatum magnam vitae deleniti iste molestiae vel veniam labore tempora, ullam expedita? Dignissimos possimus, perferendis, ipsa neque qui molestiae nostrum accusamus voluptatibus, deserunt quae quos odit modi eaque. Ducimus perferendis officia quisquam mollitia, iste dolore suscipit alias unde aut ea sunt voluptatum voluptatibus. Nam impedit voluptate officiis. Vero, debitis. Porro quo ut veniam quidem, pariatur incidunt doloribus optio iure. Provident sunt in ipsum magni reprehenderit temporibus minus doloribus nemo modi maxime facere nam, nobis corporis. Quam soluta nihil, dolorem fuga tempore magni nostrum, sint eveniet excepturi aperiam laborum praesentium architecto, autem cupiditate obcaecati sunt exercitationem quisquam asperiores iste saepe aliquam quod non expedita? Recusandae suscipit reiciendis a eveniet, quibusdam libero ea voluptatum mollitia, ullam aut quasi voluptas optio porro facere rerum reprehenderit, modi assumenda quidem molestias! Accusantium eius odit at, quaerat tempore fugit corrupti aut in vel odio unde voluptatibus eos debitis, atque impedit, praesentium nostrum non iusto? Facilis explicabo ipsam unde dolorem tempore minima distinctio suscipit recusandae hic, excepturi fugiat id ratione ea nemo quisquam at, ipsa illum placeat vitae, quod voluptatibus. Saepe repudiandae quas officia laudantium exercitationem! Architecto fuga totam placeat necessitatibus possimus, eius consectetur non deleniti quibusdam quo dolore! Labore ad soluta ex odit nesciunt mollitia odio possimus deserunt! Voluptates, enim numquam? Quod dolorem esse voluptatem accusamus incidunt et qui doloribus at maxime vero. Distinctio incidunt reprehenderit nihil sed odio fugit porro, dolores aspernatur nostrum, iusto, nam doloremque minus officiis itaque cupiditate. Eos iure voluptas sint corrupti, consequuntur ab quo ducimus! Doloremque dicta voluptates eius fugit similique voluptatum! Deleniti, fuga! Natus iure tempora doloremque animi sequi pariatur, culpa ab? Est distinctio totam fugiat exercitationem odit iure tempora? Odio, libero impedit quibusdam iste quae tenetur consequatur atque exercitationem veniam consequuntur, aut reprehenderit corporis deserunt incidunt odit vitae soluta quisquam cupiditate, debitis aperiam explicabo. Dicta voluptatibus vero sit est fugiat eaque possimus voluptates cupiditate esse placeat fuga ullam, aliquid labore! Exercitationem vitae ab nihil unde quasi quis quibusdam soluta, sapiente dolore saepe dignissimos et pariatur impedit at sint debitis. Accusantium fuga itaque, cupiditate, consequatur voluptatibus libero molestias laboriosam iste esse rem fugiat illo voluptatem.</p>
-        
+       
+        <!-- <div class="profile-menu">
+            <div class="dropdown-menu">
+                <h4>Welcome</h4>
+                <p>To access account and manage orders</p>
+                <button class="menu-button">Login/Signup</button>
+                <hr>
+                <ul>
+                    <li>Orders</li>
+                    <li>Wishlist</li>
+                    <li>Saved Address</li>
+                    <li>Setting</li>
+                </ul>
+            
+
+                
+            </div>                         -->
+            
+        </div>
     </div>
 </div>
+<!-- <script>
+    let subMenu = document.getElementById("subMenu");
 
+function toggleMenu(){
+    subMenu.classList.toggle(open) ;
+}
+</script> -->
 </body>
 </html>
