@@ -15,13 +15,14 @@
             overflow-x: hidden;
             /* overflow-y:visible; */
         }
-        
+         /*This is naviigation bar   */
         .nav{
             background-color: rgb(244, 242, 240);
             display: flex;
             /* padding-top: 10px;
             padding-bottom: 10px; */
         }
+        /* This is anchor tag of navigation bar items */
         #a{
             margin-left: 30px;
             font-size: 215x;
@@ -40,15 +41,17 @@
             color: rgb(0, 0, 0);
             text-decoration: none;
         }
+        /* This is user profile icon css */
         .profile{
             font-size: 15px;
-            padding-top: 29px;
+            padding-top: 32px;
             padding-right: 35px;
             margin-left: 550px;
         }
         #profile:hover{
             transform: scale(1.25);
         }
+        /* This is liked item section in navigation bar */
         .like{
             font-size: 15px;
             padding-top: 31px;
@@ -58,6 +61,7 @@
         #like:hover{
             transform: scale(1.25);
         }
+        /* This is cart section of nav bar */
         .cart{
             padding-top: 31px;
             padding-right: 25px;
@@ -65,59 +69,11 @@
         #cart:hover{
             transform: scale(1.25);
         }
+        /* This is hover of user profile icon of dropdown lists items  */
         li:hover{
             cursor:pointer;
         } 
-        
-        
-        .example input[type="text"]{
-            position:absolute;
-            text-align:start;
-            position: fixed;
-            margin-top: 2px;
-            padding-bottom: 12px;
-            left:55%;
-            width:20rem;
-            height: 25px;
-            background-color: rgb(255, 255, 255);
-            border-radius: 5px;
-            border: 1px solid rgb(0, 0, 0,0) ;
-        }
-        ul{
-            display: flex;
-            padding-right:20px;
-            /* padding-top: 9px; */
-            padding-bottom: 0px;
-            list-style: none;
-            /* padding-bottom: 2px; */
-        }
-        li{
-            /* padding-left: 10px; */
-            letter-spacing: 20px;
-        }
-        .icon{
-            
-            text-align: center;
-            padding-left: 10px;
-            padding-top: 3px;
-        }
-        /* .icon:hover{
-            transform: scale(1.25);
-            margin-right: 10px;
-        } */
-        
-        
-        .header{
-            color: white;
-            /* background-repeat: no-repeat;  
-            background-attachment:fixed ;
-            background-size:100% 550px; */
-            /* max-width: 1024px; */
-
-            /* padding: 230px; */
-            
-            
-        }
+        /* This is search bar */
         .example input[type="text"]{
             position:relative;
             text-align:start;
@@ -132,6 +88,7 @@
             border-radius: 5px;
             border: 1px solid rgb(0, 0, 0,0) ;
         }
+        /* This is background image animation */
         @keyframes animate{
             0%, 100% {
                 transform: translate3d(1,0,0);
@@ -140,43 +97,34 @@
                 transform: translate3d(-100%,0,0);
             }
         }
-       
+        /* This is background image  group */
         .imagegroup{
             display: flex;
             width: 100%;
             height: 500px;
             animation: animate 20s ease-in-out infinite;
         }
-        
+        /* THis is background image*/
+        img{     
+            object-fit: cover;
+            position: relative;
+            flex-shrink: 0;
+            background-repeat: no-repeat;  
+        }
+        /* This is Logo in nav bar */
         #img{
             padding-top: 15px;
             margin-top: 10px;
             padding-bottom: 15px;
             padding-left: 50px;
         }
-        img{
-            /* width:1800px;
-            height: 500px; */
-            object-fit: cover;
-            position: relative;
-            flex-shrink: 0;
-            background-repeat: no-repeat;  
-            /* padding-left: 50px;
-            padding-top:7px; */
-            /* object-fit: cover; */
-            /* background-attachment:fixed ; */
-            /* position: absolute; */
-            /* margin-left: 50px;
-            padding-top: 10px;
-            background-size: 40px 30px; */
-        }
-       
+        /* This is drop down menu heading and paragraph tag */
         h3,p{
             margin: 20px 36px;
             margin-bottom: 2px;
             text-align: left;
         } 
-        
+        /* This is login signup button in dropdown menu of profile icon */
         button{
             background-color: rgb(255, 255, 255);
             color: rgb(255, 92, 144);
@@ -194,6 +142,7 @@
             border: 1px solid rgb(255, 92, 143);
             
         } 
+        /* This is horizontal line in dropdown menu */
         hr{
             width: 270px; 
             margin-top: 20px;
@@ -201,7 +150,7 @@
             /* float: left; */
             ;
         }
-        
+        /* This is drop down menu content */
         .dropdown-content{
             position: absolute;
             margin-top: 40px;
@@ -214,13 +163,13 @@
             align-items: center;
             box-shadow: 0px 8px 16px rgba(0,0,0,.2);
         } 
-        /* .dropdown .open-menu{
-            max-width: 300px;
-        } */
+        /* This is dropdown menu box */
         .dropdown{
             position: relative;
             display: inline-block;
         }
+
+        /* This is anchor tag of drop down menu content */
         .dropdown-content a{
             display:flex;
             flex-direction: column;   
@@ -237,8 +186,7 @@
 
             
         } 
-        /* .profile li:hover .dropdown{display: block;} */
-        
+        /*This is to display dropdown menu block on profile icon hover  */
         .profile:hover .dropdown-content{display: block;}
         
         </style>
@@ -284,7 +232,7 @@
                             <div class="dropdown" >
                                 <div class="dropdown-content">
                                     <h3>Welcome</h3>
-                                    <p>To access account and manage orders</p>                       <button>Login/Signup</button>
+                                    <p>To access account and manage orders</p>                       <button onclick="">Login/Signup</button>
                                     <hr>
                                     <a href="#">Orders</a>
                                     <a href="#">Wishlist</a>
